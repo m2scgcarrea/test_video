@@ -1,0 +1,603 @@
+.background.world-cup::before {
+    background-image: <%- include('backgroundWorldCup2022') %>;
+    background-color: #150c4ad6;
+}
+.header.world-cup {
+    background-image: <%- include('headerBackgroundWorldCup2022') %>;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.world-cup-logo {
+    display: none;
+}
+@media (min-aspect-ratio: 1/1) {
+    .header.world-cup {
+        background-position-x: -30px;
+    }
+}
+@media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 3/2) {
+    .world-cup-logo {
+        display: none;
+        height: 9px;
+        transform: scale(1.8);
+        margin: 4px 28px 0 6px;
+    }
+    .header.world-cup {
+        padding: 4px 10px 4px;
+    }
+    .info.world-cup .tournament {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 150px;
+        display: inline-block;
+    }
+}
+@media (max-aspect-ratio: 1/1) {
+    .header .info.world-cup {
+        z-index: 1000;
+        position: relative;
+        margin-top: 2px;
+    }
+    .header.world-cup, .world-cup-logo {
+        height: 15px;
+        display: none;
+    }
+    .header.world-cup {
+        background-position-x: 0px;
+    }
+    .world-cup-logo {
+        position: relative;
+        transform: scale(1.5);
+        bottom: 9px;
+        left: 4px;
+        display: none;
+    }
+    .logo.world-cup {
+        z-index: 1000;
+        position: relative;
+        margin-top: 20px;
+    }
+    .main.world-cup {
+        padding: 60px 20px;
+    }
+    .info .right.world-cup {
+        bottom: 110px;
+        position: relative;
+        float: right;
+        font-weight: bold;
+    }
+    .info.world-cup .tournament {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 250px;
+        display: inline-block;
+    }
+}
+@media (min-aspect-ratio: 3/2) {
+    .header.world-cup {
+        background-position-x: -18px;
+        padding: 12px;
+        height: 0px;
+        transform: rotate(270deg);
+        position: relative;
+        left: -53px;
+        top: 16px;
+        margin-right: -45px;
+    }
+    .world-cup-logo {
+        transform: scale(0.4);
+        position: relative;
+        left: -24px;
+        top: 2px;
+        height: 26px;
+        width: auto;
+        display: none;
+    }
+    .header .logo.world-cup {
+        position: relative;
+        right: 30px;
+        top: 0px;
+        height: 12px;
+        width: auto;
+    }
+}
+/* 300x50 */
+@media (aspect-ratio: 300/50) {
+    .frame1 .header .logo.world-cup {
+        left: 33px;
+        top: -4px;
+    }
+    .frame1 .header .info.world-cup {
+        z-index: 1000;
+        position: relative;
+        margin-top: 2px;
+    }
+    .frame1 .header.world-cup, .world-cup-logo {
+        height: 15px;
+        display: none;
+    }
+    .frame1 .header.world-cup {
+        background-position-x: -25px;
+        padding: none;
+        height: none;
+        transform: scale(1.6);
+        left: 0px;
+        top: 0px;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANUAAABQCAYAAACOPTDoAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TxVIrgnYQcchQnVoQFXHUKhShQqgVWnUwufQLmjQkKS6OgmvBwY/FqoOLs64OroIg+AHi6OSk6CIl/i8ptIj14Lgf7+497t4BQr3MNKtrHNB020wl4mImuyr2vKIXAwggiKjMLGNOkpLoOL7u4ePrXYxndT735+hTcxYDfCLxLDNMm3iDeHrTNjjvE4dZUVaJz4mjJl2Q+JHrisdvnAsuCzwzbKZT88RhYrHQxkobs6KpEU8RR1RNp3wh47HKeYuzVq6y5j35C0M5fWWZ6zRHkMAiliBBhIIqSijDRoxWnRQLKdqPd/APu36JXAq5SmDkWEAFGmTXD/4Hv7u18pMTXlIoDnS/OM7HKNCzCzRqjvN97DiNE8D/DFzpLX+lDsx8kl5raZEjoH8buLhuacoecLkDDD0Zsim7kp+mkM8D72f0TVlg8BYIrnm9Nfdx+gCkqavkDXBwCIwVKHu9w7sD7b39e6bZ3w9SlHKaHfLyCgAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+YLEgghGBDpIDcAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAADW0lEQVR42u3dwXLbMBRDUYBy/v9/m0jogpQs27HoNFS9uWfTaZJVZjDvUSIcJ4kAPLEoKpIk330nkhwpiuwosSy3nwbwrajIkrw8zh5rDZTrzzlysQkV0B1WUYqv4ym7SeXUL0WyJ0uSWf+AF6dW6lR6/Fq2QEli/QNe3ANroCJ9tTDVFdA3gSJUwA99WbpIki1pkYvvn18QKuAlLTpT6hlq1ufDhNp+lDMVcLj1tad8+0fqy9NAMamAExAqoL/1bf8mUVT0mT8hVMBv90BJsy1LmvShZA6hAn7p0h6pK5FUlOXxmQShAl7cA5NI7ZH6+hI4ysPEIlRAb+tb0q4k+ck1paJ5N7EIFdBTfL1Qa21PLSy1m+n1XfA6sXhPBRyi+gG8f7DxKwCOzlT0qYATNkD6VMA5U4s+FTB0D6RPBZyBPhUwCn0qYNjWR58KeDdCBfS3PvpUwCl7oOhTAcPRpwIG7oH0qYBRWx99KmAw+lTASPSpgMH73y5Q0c36t74UXtr5agsYkwo4PlPVNS+yXP+zZN33pOKbqWZP9KmAI1ugbM0tUCk1XHENkrac1atLhArojCrLmiVNu6C1R38tQoum3W31C781oD+upq1O7/re1/UMJT9eriVUQE9b+eoq2AaUvg8U6x/wyqGq3ffb9z+ir6f1DyYV0D1X1RsVsreVr/iDPhXwvxAqoLsCWm5TKu2h+ZJP+lTAv61++/VPu9sUl6d9Km5UAL1QrbcoWpzSLtV6DdjdJyoxqYAXgjUXtytJkVug1nAtd4OJUAGH56l6SXaSNO+G1/rSarsbOC/0qYCXtz9bSTRF125VruvfrPr1dWJxpgI6qYp39/12E6x+f1F8Ww9hUgGDESrgaFD5Wv/Q7ixV24lRXLRo9ym2/H0q4Fi/T9UqIUtU2kcsESqgc6Y66lNtE2oq9KmAn4yrp30qSeXu5S+hAnroUwGDD1X0qYDR5yr6VMBbESqguwLSpwIGrn6iTwUMDxV9KmB8sOhTAcPOU/SpgPHbH30qYGyq6FMBb0aogKNBRZ8KGIs+FXDCmYo+FXDCuKJPBYxEnwoYfKiiTwWMPlfRpwLeilAB3RWQPhUwcPUTfSpgeKjoUwHjg0WfChh2nqJPBYzf/uhTAWNT9dM+1V8E6VGtGB2JnQAAAABJRU5ErkJggg==);
+    }
+    .frame1 .world-cup-logo {
+        position: relative;
+        transform: scale(1.2);
+        top: 4px;
+        left: 14px;
+        display: none;
+    }
+    .frame1 .logo.world-cup {
+        z-index: 1000;
+        position: relative;
+        margin-top: 10px;
+    }
+    .frame1 .main.world-cup {
+        padding: 60px 20px;
+    }
+    .frame1 .info .right.world-cup {
+        bottom: 106px;
+        position: relative;
+        float: right;
+        font-weight: bold;
+    }
+    .frame1 .footer .call-to-action {
+        display: none;
+    }
+    .frame1 .footer.world-cup .certifications {
+        display: none;
+    }
+    .frame1 .footer.world-cup .mobileCertifications {
+        margin-left: 52px;
+    }
+    .frame1 .footer.world-cup .disclaimer {
+        font-size: 0.3em;
+    }
+    .frame2 .container {
+        flex-direction: column;
+    }
+    .frame2 .header {
+        display: none;
+    }
+    .frame2 .main {	
+        justify-content: center;	
+    }
+    .frame2 .main .match {
+        max-width: none;
+        padding: 0px;
+    }
+    .frame2 .match .teams {
+        bottom: 5px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .frame2 .main .teams .team .name {
+        padding-left: 0.2em
+    }
+    .frame2 .match .teams .first.team {
+        animation: showTeam1 0.5s;
+        margin-right: 5px;
+    }
+    .frame2 .match .teams .second.team {
+        flex-direction: row-reverse;
+        transform: translateY(150%);
+        animation: showTeam2 0.5s 0.5s both;
+        margin-left: 5px;
+    }
+    .frame2 .call-to-action {	
+        display: none;	
+    }	
+    .frame2 .odds {	
+        display: none;	
+    }
+    .frame2 .match .info {
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+        max-width: 280px;
+    }
+    .frame2 .footer {
+        padding: 0px;
+        flex: 0 0 10px;
+    }
+    .frame2 .footer .certifications {
+        display: none;
+    }
+    .frame2 .footer .disclaimer {
+        font-size: 0.4em;
+    }
+    .frame3 .container {
+        flex-direction: column;
+    }
+    .frame3 .header {
+        display: none;
+    }
+    body[data-layout="1"] .frame3 .main .odds {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 3px;
+        padding-right: 10px;
+    }
+    .frame3 .main .guess {
+        padding-bottom: 0px;
+        font-size: 10px;
+        animation: showGuess 1s
+    }
+    .frame3 .main .odds {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 10px;
+    }
+    .frame3 .main #odds {
+        transform: translateY(150%);
+        animation: showOdds 1s 1s both;
+    }
+    .frame3 .main .odd {	
+        flex-direction: row;	
+        padding: 1px;	
+        align-items: center;	
+    }
+    .frame3 .main .odd .bookmaker {
+        margin: 0;
+    }
+    .frame3 .main .odd .bookmaker .logo {
+        max-width: 75%;
+        max-height: 75%;
+    }
+    .frame3 .footer {
+        padding: 0px;
+        flex: 0 0 0px;
+    }
+    .frame3 .footer .certifications {
+        display: none;
+    }
+    .frame3 .footer .call-to-action {
+        display: none;
+    }
+    .frame3 .footer .disclaimer {
+        font-size: 0.4em;
+    }
+    .frame3 .main .match {
+        display: none;
+    }
+    .frame4 .main .match {
+        display: none;
+    }
+    .frame4 .main .odds {
+        display: none;
+    }
+    .frame4 .footer {
+        flex-flow: row wrap;
+        flex: 1 0;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .frame4 .footer .certifications {
+        display: none;
+    }
+    .frame4 .footer .mobileCertifications {
+        height: 2.3em;
+        display: block;
+        order: 1;
+    }
+    .frame4 .footer .call-to-action {
+        width: auto;
+        order:2;
+        animation: scaleCallToAction 1s
+    }
+    .frame4 .footer .disclaimer {
+        font-size: 0.4em;
+        order:3;
+        margin-left: 20px;
+    }
+    .frame4 .container {
+        flex-direction: column;
+    }
+    .frame4 .header {
+        display: none;
+    }
+
+}
+/* 320x50 */
+@media (aspect-ratio: 320/50) {
+    .frame1 .header .logo.world-cup {
+        left: 33px;
+        top: -4px;
+    }
+    .frame1 .header .info.world-cup {
+        z-index: 1000;
+        position: relative;
+        margin-top: 2px;
+    }
+    .frame1 .header.world-cup, .world-cup-logo {
+        height: 15px;
+        display: none;
+    }
+    .frame1 .header.world-cup {
+        background-position-x: -25px;
+        padding: none;
+        height: none;
+        transform: scale(1.6);
+        left: 0px;
+        top: 0px;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANUAAABQCAYAAACOPTDoAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TxVIrgnYQcchQnVoQFXHUKhShQqgVWnUwufQLmjQkKS6OgmvBwY/FqoOLs64OroIg+AHi6OSk6CIl/i8ptIj14Lgf7+497t4BQr3MNKtrHNB020wl4mImuyr2vKIXAwggiKjMLGNOkpLoOL7u4ePrXYxndT735+hTcxYDfCLxLDNMm3iDeHrTNjjvE4dZUVaJz4mjJl2Q+JHrisdvnAsuCzwzbKZT88RhYrHQxkobs6KpEU8RR1RNp3wh47HKeYuzVq6y5j35C0M5fWWZ6zRHkMAiliBBhIIqSijDRoxWnRQLKdqPd/APu36JXAq5SmDkWEAFGmTXD/4Hv7u18pMTXlIoDnS/OM7HKNCzCzRqjvN97DiNE8D/DFzpLX+lDsx8kl5raZEjoH8buLhuacoecLkDDD0Zsim7kp+mkM8D72f0TVlg8BYIrnm9Nfdx+gCkqavkDXBwCIwVKHu9w7sD7b39e6bZ3w9SlHKaHfLyCgAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+YLEgghGBDpIDcAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAADW0lEQVR42u3dwXLbMBRDUYBy/v9/m0jogpQs27HoNFS9uWfTaZJVZjDvUSIcJ4kAPLEoKpIk330nkhwpiuwosSy3nwbwrajIkrw8zh5rDZTrzzlysQkV0B1WUYqv4ym7SeXUL0WyJ0uSWf+AF6dW6lR6/Fq2QEli/QNe3ANroCJ9tTDVFdA3gSJUwA99WbpIki1pkYvvn18QKuAlLTpT6hlq1ufDhNp+lDMVcLj1tad8+0fqy9NAMamAExAqoL/1bf8mUVT0mT8hVMBv90BJsy1LmvShZA6hAn7p0h6pK5FUlOXxmQShAl7cA5NI7ZH6+hI4ysPEIlRAb+tb0q4k+ck1paJ5N7EIFdBTfL1Qa21PLSy1m+n1XfA6sXhPBRyi+gG8f7DxKwCOzlT0qYATNkD6VMA5U4s+FTB0D6RPBZyBPhUwCn0qYNjWR58KeDdCBfS3PvpUwCl7oOhTAcPRpwIG7oH0qYBRWx99KmAw+lTASPSpgMH73y5Q0c36t74UXtr5agsYkwo4PlPVNS+yXP+zZN33pOKbqWZP9KmAI1ugbM0tUCk1XHENkrac1atLhArojCrLmiVNu6C1R38tQoum3W31C781oD+upq1O7/re1/UMJT9eriVUQE9b+eoq2AaUvg8U6x/wyqGq3ffb9z+ir6f1DyYV0D1X1RsVsreVr/iDPhXwvxAqoLsCWm5TKu2h+ZJP+lTAv61++/VPu9sUl6d9Km5UAL1QrbcoWpzSLtV6DdjdJyoxqYAXgjUXtytJkVug1nAtd4OJUAGH56l6SXaSNO+G1/rSarsbOC/0qYCXtz9bSTRF125VruvfrPr1dWJxpgI6qYp39/12E6x+f1F8Ww9hUgGDESrgaFD5Wv/Q7ixV24lRXLRo9ym2/H0q4Fi/T9UqIUtU2kcsESqgc6Y66lNtE2oq9KmAn4yrp30qSeXu5S+hAnroUwGDD1X0qYDR5yr6VMBbESqguwLSpwIGrn6iTwUMDxV9KmB8sOhTAcPOU/SpgPHbH30qYGyq6FMBb0aogKNBRZ8KGIs+FXDCmYo+FXDCuKJPBYxEnwoYfKiiTwWMPlfRpwLeilAB3RWQPhUwcPUTfSpgeKjoUwHjg0WfChh2nqJPBYzf/uhTAWNT9dM+1V8E6VGtGB2JnQAAAABJRU5ErkJggg==);
+    }
+    .frame1 .world-cup-logo {
+        display: none;
+        position: relative;
+        transform: scale(1.2);
+        top: 4px;
+        left: 14px;
+    }
+    .frame1 .logo.world-cup {
+        z-index: 1000;
+        position: relative;
+        margin-top: 10px;
+    }
+    .frame1 .main.world-cup {
+        padding: 60px 20px;
+    }
+    .frame1 .info .right.world-cup {
+        bottom: 106px;
+        position: relative;
+        float: right;
+        font-weight: bold;
+    }
+    .frame1 .footer .call-to-action {
+        display: none;
+    }
+    .frame1 .footer .certifications {
+        display: none;
+    }
+    .frame1 .footer.world-cup .mobileCertifications {
+        margin-left: 52px;
+    }
+    .frame1 .footer .disclaimer {
+        font-size: 0.3em;
+    }
+    .frame2 .container {
+        flex-direction: column;
+    }
+    .frame2 .header {
+        display: none;
+    }
+    .frame2 .main {	
+        justify-content: center;	
+    }
+    .frame2 .main .match {
+        max-width: none;
+        padding: 0px;
+    }
+    .frame2 .match .teams {
+        bottom: 5px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .frame2 .main .teams .team .name {
+        padding-left: 0.2em
+    }
+    .frame2 .match .teams .first.team {
+        animation: showTeam1 1s;
+        margin-right: 5px;
+    }
+    .frame2 .odds {	
+        display: none;	
+    }
+    .frame2 .match .teams .second.team {
+        flex-direction: row-reverse;
+        transform: translateY(150%);
+        animation: showTeam2 1s 1s both;
+        margin-left: 5px;
+    }
+    .frame2 .call-to-action {
+        display: none;
+    }
+    .frame2 .match .info {
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+        max-width: 300px;
+    }
+    .frame2 .footer {
+        padding: 0;
+        flex: 0 0 10px;
+    }
+    .frame2 .footer .certifications {
+        display: none;
+    }
+    .frame2 .footer .disclaimer {
+        font-size: 0.4em;
+    }
+    .frame3 .container {
+        flex-direction: column;
+    }
+    .frame3 .header {
+        display: none;
+    }
+    body[data-layout="1"] .frame3 .main .odds {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 3px;
+        padding-right: 10px;
+    }
+    .frame3 .main .guess {
+        padding-bottom: 0;
+        font-size: 10px;
+        animation: showGuess 1s;
+    }
+    .frame3 .main .odds {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 10px;
+    }
+    .frame3 .main #odds {
+        transform: translateY(150%);
+        animation: showOdds 1s 1s both;
+    }
+    .frame3 .main .odd {
+        flex-direction: row;
+        padding: 1px;
+        align-items: center;
+    }
+    .frame3 .main .odd .bookmaker {
+        margin: 0;
+    }
+    .frame3 .main .odd .bookmaker .logo {
+        max-width: 75%;
+        max-height: 75%;
+    }
+    .frame3 .footer {
+        padding: 0px;
+        flex: 0 0 0px;
+    }
+    .frame3 .footer .certifications {
+        display: none;
+    }
+    .frame3 .footer .call-to-action {
+        display: none;
+    }
+    .frame3 .footer .disclaimer {
+        font-size: 0.4em;
+    }
+    .frame3 .main .match {
+        display: none;
+    }
+    .frame4 .main .match {
+        display: none;
+    }
+    .frame4 .main .odds {
+        display: none;
+    }
+    .frame4 .footer {
+        flex-flow: row wrap;
+        flex: 1 0;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .frame4 .footer .certifications {
+        display: none;
+    }
+    .frame4 .footer .mobileCertifications {
+        height: 2.3em;
+        display: block;
+        order: 1;
+    }
+    .frame4 .footer .call-to-action {
+        width: auto;
+        order:2;
+        animation: scaleCallToAction 1s
+    }
+    .frame4 .footer .disclaimer {
+        font-size: 0.4em;
+        order:3;
+        margin-left: 20px;
+    }
+    .frame4 .container {
+        flex-direction: column;
+    }
+    .frame4 .header {
+        display: none;
+    }
+
+}
+
+@keyframes showTeam1 {
+    0% {
+        transform: translateY(150%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes showTeam2 {
+    0% {
+        transform: translateY(150%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes showGuess {
+    0% {
+        transform: translateY(-150%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes showOdds {
+    0% {
+        transform: translateY(150%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes scaleCallToAction {
+    0% {
+        transform: scale(4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes slide {
+    0% {
+        transform: translateX(-101%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideAll {
+    0% {
+        transform: translateX(-101%);
+    }
+    100% {
+        transform: translateX(101%);
+    }
+}
+@keyframes appear {
+    0%, 22%, 83%, 100% {
+        color: #000;
+    }
+    23%, 82% {
+        color: #fff;
+    }
+}
+@keyframes offset {
+    0%, 10% {
+        opacity: 0;
+        transform: translateY(3em)
+    }
+    23%, 88% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    98%, 100% {
+        opacity: 0;
+        transform: translateY(-4em)
+    }
+}
+@keyframes scale {
+    0% {
+        opacity: 0;
+        transform: scale(2);
+    }
+    90% {
+        transform: scale(.85);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
